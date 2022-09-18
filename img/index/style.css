@@ -1,0 +1,916 @@
+/* ヘッダー */
+#bg-video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: url('poster.jpg') no-repeat;
+    background-size: cover;
+}
+.header-title{
+    position: relative; /*必ず必要*/
+    z-index: 2; /*必ず必要*/
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    margin: auto;
+}
+
+header h1{
+    padding: 30px;
+}
+
+/* navの動きと関係のないCSS */
+nav{
+    background-color: rgba(255, 255, 255, .2);
+    color: #000;
+    text-align: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu li{
+    width: calc(100vw / 4);
+    background-color: rgba(255, 255, 255, .2);
+    position: relative; /* これは動きと関係するCSS */
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, .2);
+    color: #000;
+}
+.submenu{
+    list-style: none;
+    margin: 0 auto;
+}
+.submenu li a:hover{
+    background-color: #708093;
+}
+
+/* navの動きに関係するCSS　ドロップダウンメニュー用のCSS */
+
+.submenu{
+    list-style: none;
+    position: absolute;
+    display: none;
+}
+
+nav ul li.child::before{
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(135deg);
+}
+
+.mainTop{
+    width: 100%;
+    height: 550px;
+}
+
+/* addict Seriesのページ */
+.addictHead{
+    background: linear-gradient(180deg, rgba(253,225,219,1) 0%, rgba(249,197,203,1) 100%);
+}
+
+.addictHeadInner{
+    background: linear-gradient(180deg, rgba(253,225,219,1) 0%, rgba(249,197,203,1) 100%);
+    width: 1100px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.headCont{
+    padding-top: 50px;
+    padding-left: 50px;
+    width: 500px;
+    height: 180px;
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+.headCont h2{
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    padding-right: 20px;
+}
+
+.headCont h2 span:nth-child(1){
+    font-size: 36px;
+    font-weight: bold;
+}
+.headTtl{
+    display: flex;
+    align-items: center;
+}
+
+.headCont h3{
+    font-size: 18px;
+    padding-left: 20px;
+    border-left: 2px solid rgba(226,177,177,1);
+}
+
+.headCont p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding-top: 5px;
+    color: rgba(223, 130, 116, 1);
+}
+
+.headCont h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.headImg{
+    width: 400px;
+    height: 380px;
+}
+
+.headImg img{
+    height: 100%;
+}
+
+.addictInner{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.addictCare{
+    margin-top: 100px;
+    width: 1100px;
+}
+
+.addictCare h2{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.addictCare h2 span:nth-child(1){
+    font-weight:bold;
+}
+
+.addictCare h2 span:nth-child(2){
+    color: rgba(223, 130, 116, 1)
+}
+
+.addictCare p{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.careFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 130px 0;
+}
+
+.careFlex h3{
+    display: inline-block;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.careFlex h3 span{
+    color: #ee9ca7;
+    font-size: 32px;
+    font-weight: bold;
+}
+.careFlex img{
+    height: 100%;
+}
+.careFlex .imgBox{
+    width: 500px;
+    height: 350px;
+}
+.careFlex .textBox{
+    width: 550px;
+    height: 350px;
+}
+.careFlex .textBox p{
+    font-size: 18px;
+    line-height: 1.8; 
+    text-align: justify;
+}
+
+.addictTtl{
+    margin-top: 100px;
+}
+
+.addictserum{
+    border: 1px solid #ffdde1;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+}
+
+.addictserum h3{
+    font-size: 24px;
+    padding: 20px;    
+    background: linear-gradient( to left,  #ffdde1, #ee9ca7);
+    color: white;
+}
+
+.addictserum h3 span{
+    font-size: 18px;
+}
+
+.addictserum ul{
+    margin-top: 20px;
+}
+
+.addictserum ul li{
+    display: flex;
+    align-items: center;
+}
+
+.addictserum li img{
+    height: 30px;
+}
+
+.addictserum li .checkBox{
+    margin-left: 20px;
+}
+
+.addictserum li .textBox{
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.addictserum p{
+    font-size: 14px;
+    padding-left: 62px;
+    padding-bottom: 30px;text-align: left;
+
+}
+
+.howtoInner{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.howtoHead{
+    margin-bottom: 40px;
+}
+.howtoBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.howtoImg{
+    width: 400px;
+}
+
+.howtoBox img{
+    width: 100%;
+}
+.howtoCont{
+    text-align: left;
+    width: 650px;
+    margin-left: 50px;
+}
+
+.howtoCont h3{
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.howtoCont P{
+    text-align: left;
+}
+
+/* v.o.sのページ */
+.compareFlex{
+    width: 1100px;
+}
+.compareFlex ul.compare{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.compImg{
+    width: 500px;
+    height: 250px;
+}
+
+.compareFlex ul img{
+    width: 100%;
+}
+
+.compCont{
+    width: 500px;
+}
+
+.compareFlex h3{
+    text-align: center;
+    font-size: 26px;
+    padding: 20px 0;
+}
+.compareFlex h4{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.compareFlex p{
+    font-size: 18px;    
+}
+
+/* ヨガのページ */
+    
+.yogaContentSection,
+.profileSection{
+    margin: 0 auto;
+    background-color: whitesmoke;
+}  
+
+.yogaContentInner,
+.profileInner{
+    margin: 0 auto;
+    width: 1100px;
+    background-color: whitesmoke;
+}  
+.yogaSection video{
+    width: 100vw;
+}
+
+.yogaIntroSection{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+    background-color: white;
+}
+
+.YogaContent{
+    margin-top: 60px;
+    background-color: whitesmoke;
+}
+
+.YogaContent ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1100px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.YogaContent ul img{
+    height: 366px;
+    width: 366px;
+}
+
+.YogaContent ul li{
+    width: 366px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.yogaEffectInner h2{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.yogaEffectSection h3{
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    
+}
+
+.yogaEffectSection ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.yogaEffectSection ul img{
+    height: 170px;
+    padding: 0 20px;
+}
+
+.yogaEffectSection ul li{
+    text-align: center;
+    font-size: 18px;
+}
+
+.profileSection ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+.profileSection ul li{
+    width: 500px;
+    text-align: center;
+}
+
+.profileSection ul li img{
+    height: 300px;
+}
+
+.profileImg p{
+    padding-top: 10px;
+    font-size: 26px;
+}
+
+.profileImg p span{
+    font-size: 14px;
+}
+
+.profileContent p{
+    font-size: 18px;
+}
+
+
+.mainYogaNews{
+    margin-top: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgrey;
+    border-top: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.newsTtl{
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 18px;
+    border-right: 1px solid lightgrey;
+}
+
+
+.mainYogaNews p{
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button {
+    appearance: none;
+    margin: 0 auto;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+  }
+
+  a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+  }
+  
+  .button {
+      position: relative;
+      display: block;
+      padding: 1em 2em 1em 1em;
+      margin: 1em;
+      width: 175px;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      line-height: 1;
+      background: #9e4244;
+      text-indent: 0.1em;
+      letter-spacing: 0.1em;
+      border-radius: 1.5em;
+      box-sizing:border-box;
+      cursor:pointer;
+  }
+  
+  .button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1.5em;
+    margin: auto;
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    transform: rotate(45deg);
+    transition: right 0.5s;
+  }
+  
+.button:hover:after{
+    right: 1em;
+  }
+
+
+  /* 脱毛ページ */
+.hikariHead{
+    background-image: url(/img/datsumo/datsumoTopdatsumoTop.png);
+    background-size: cover;
+}
+
+.hikariHeadInner{
+    width: 1100px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/*  メインページ */
+.mainVideo{
+    text-align: center;
+    padding: 100px;
+}
+.mainVideo video{
+    height: 250px;
+}
+
+.greetingSection{
+   margin-bottom: 100px;
+}
+
+.greetingInner{
+    width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.greetingInner h2{
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.productSection,
+.mainYogaSection{
+    margin: 0 auto;
+    background-color: whitesmoke;
+} 
+
+.maintopSection,
+.salonSection,
+.accessSection{
+    margin: 0 auto;
+}
+
+.productInner,
+.mainYogaInner{
+    margin: 0 auto;
+    width: 1100px;
+    background-color: whitesmoke;
+    padding-bottom: 100px;
+}    
+
+.maintopInner,
+.salonInner,
+.accessInner{
+    margin: 0 auto;
+    width: 1100px;
+    padding-bottom: 100px;
+}
+
+
+.productSection h2,
+.salonSection h2,
+.mainYogaSection h2,
+.accessSection h2{
+    padding-top: 70px;
+    font-size: 16px;
+}
+
+.productSection h2 span,
+.salonSection h2 span,
+.mainYogaSection h2 span,
+.accessSection h2 span{
+    font-size: 40px;
+    font-family: 'MonteCarlo', cursive;
+}
+
+.productSection section{
+    margin-top: 60px;
+}
+
+article{
+    width: 250px;
+    height: 300px;
+    padding: 5px;
+    margin: 0 2px;
+    padding-top: 30px;
+}
+
+#skincare article{
+    background-color: white
+}
+
+#lashcare article{
+    background-color: bisque;
+}
+
+#haircare article{
+    background-color: cadetblue;
+}
+
+.articles{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tab{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.tab li{
+    /* width: calc(100%/3); */
+    width: 222px;
+    text-align: center;
+}
+.tab li a{
+    display: block;
+    background-color: #ccc;
+    font-size: 16px;
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 20px;
+    color: #333;
+    letter-spacing: 1.8px;
+}
+
+.tab li a span{
+    font-size: 12px;
+}
+
+/*jQueryの記述*/
+.tab li.active a{
+    background: #773c30;
+    color: #fff;
+}
+
+.area{
+    display: none;
+    opacity: 0;
+    padding: 40px 0;
+}
+
+.area.is-active{
+    display: block;
+    opacity: 1;
+    animation-name: tabAnime;
+    animation-duration: 2s;
+}
+
+@keyframes tabAnime{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1s;
+    }
+}
+
+.articles img{
+    height: 200px;
+}
+
+.articles h3{
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.articles p{
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.salonSection ul{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+    list-style: none;
+    margin-top: 60px;
+    width: 1100px;
+}
+
+.salonSection ul.show{
+    opacity: 1;
+    transform: none;
+}
+
+.salonSection ul li h3{
+    font-family:'Times New Roman', Times, serif;
+    padding: 10px;
+    font-size: 28px;
+}
+
+.salonSection ul li h4{
+    padding-bottom: 15px;
+    font-size: 16px;
+}
+
+.salonSection ul li{
+    background-color: #fefefe;
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, .3);
+    width: 300px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+                -6px -6px 10px rgba(255, 255, 255, .5),
+                6px 6px 8px rgba(255, 255, 255, .075),
+                6px 6px 10px rgba(0, 0, 0, .15);
+                box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, .3);
+}
+
+.salonSection ul li:hover {
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+                -2px -2px 4px rgba(255, 255, 255, .4),
+                2px 2px 2px rgba(255, 255, 255, .05),
+                2px 2px 4px rgba(0, 0, 0, .1);
+}
+.salonSection ul li:active {
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+                inset -2px -2px 4px rgba(255, 255, 255, .5),
+                inset 2px 2px 2px rgba(255, 255, 255, .075),
+                inset 2px 2px 4px rgba(0, 0, 0, .15);
+  }
+
+.salonSection ul li img{
+    width: 300px;
+    text-align: center;
+}
+
+.salonSection h3{
+    padding-top: 20px;
+    font-size: 23px;
+}
+
+.mainYogaContent{
+    margin-top: 60px;
+}
+
+.mainYogaContent ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1100px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.mainYogaContent ul img{
+    height: 366px;
+    width: 366px;
+}
+
+.mainYogaContent ul li{
+    width: 366px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Facial page */
+
+.facialMenu{
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 1100px;
+    height: 600px;
+    background-color: #fff;
+}
+.facialFlex{
+    background-color: #fff;
+    width: 1100px;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.facialImg{
+    width: 450px;
+    margin-top: 60px;
+}
+.facialImg img{
+    width: 100%;
+}
+
+.facialCont{
+    width: 420px;
+    margin-top: 60px;
+}
+.facialCont{
+    line-height: 1.5;
+}
+.facialCont h3{
+    font-size: 22px;
+}
+
+.facialDes{
+    line-height: 1.2;
+    margin-top: 20px;
+}
+.facialFee{
+    margin-top: 10px;
+}
+
+.facialFee tr{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.facialFee th{
+    border: 1px solid #333;
+    width: 250px;
+    padding: 10px 0;
+}
+.facialFee td{
+    border: 1px solid #333;
+    width: 250px;
+    padding: 10px 0;
+}
+
+.facialFlow{
+background-color: #fff;    
+}
+
+.facialFlow ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facialFlow ul li{
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background-color: #ee9ca7;
+    margin: 10px;
+}

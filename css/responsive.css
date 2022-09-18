@@ -1,0 +1,1121 @@
+@media  (max-width:760px) {
+
+    body {
+        margin: 0;
+    }
+
+    /* ヘッダー */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        /* backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, 0.5); */
+        background-color: #f5f5f5;
+    }
+    .headerInner {
+        position: static;
+        height: 50px;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: auto;
+        line-height: 45px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .headerLogo a{
+        font-size: 20px;
+    }
+    /* ハンバーガーメニュー */
+
+    .logottl {
+        background-color: none;
+    }
+
+    .logottl h1{
+        font-size: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-btn {
+        position: fixed;
+        top: 2px;
+        right: 0px;
+        display: flex;
+        height: 45px;
+        width: 45px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+    }
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: "";
+        display: block;
+        height: 1.5px;
+        width: 20px;
+        border-radius: 3px;
+        background-color: #000;
+        position: absolute;
+    }
+    .menu-btn span:before {
+        bottom: 7px;
+    }
+    .menu-btn span:after {
+        top: 7px;
+    }
+    #menu-btn-check:checked ~ .menu-btn span {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #menu-btn-check:checked ~ .menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+        transition: 0.3s;
+    }
+    #menu-btn-check:checked ~ .menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        transition: 0.3s;
+    }
+    #menu-btn-check {
+        display: none;
+    }
+    .hamburger-menu-content {
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        z-index: 80;
+        transition: 0.5s;
+        backdrop-filter: blur(3px);
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    #menu-btn-check:checked ~ .hamburger-menu-content {
+        left: 20%;
+    }
+    #menu-btn-check:checked ~ .hamburger-backcolor {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 70;
+        background: rgba(3,3,3,.5);
+        display: block;
+    }
+    .hamburger-menu-content ul {
+        padding: 70px 10px 100vh;
+        overflow: hidden;
+    }
+    .hamburger-menu-content ul li {
+        list-style-type: none;
+        font-weight: bold;
+        padding-top: 10px;
+    }
+
+    .hamburger-menu-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        box-sizing: border-box;
+        color: #000;
+        text-decoration: none;
+        padding: 9px 15px 10px 15px;
+        position: relative;
+    }
+    .hamburger-menu-content ul li.submenu a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 1px #000;
+        border-right: solid 1px #000;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+    }
+
+    .hamburger-menu-content ul .hamburger-sns {
+        border-bottom: none;
+    }
+.hamburger-menu-content ul:first-child .hamburger-sns {
+    float: left;
+    padding: 20px 2px 2px 10px;
+}
+
+.hamburger-menu-content ul .hamburger-sns a::before {
+display: none;
+}
+
+.hamburger-menu-content ul .hamburger-sns a {
+    padding: 0;
+}
+
+.hamburger-sns img{
+    width: 35px;
+}
+
+
+.hamburger-menu-content li.submenu a{
+    color: rgb(123, 123, 123);
+    padding-top: 0px;
+    line-height: 0.8;
+    font-size: 14px;
+}
+
+
+.accessContent{
+    width: 80%;
+    height: auto;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+
+.accessContent li.shopname{
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.accessMap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
+    margin-top: 30px;
+}
+.accessMap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.accessContent ul {
+    margin-top: 30px;
+    font-size: 14px;
+}
+.accessContent ul li{
+    width: auto;
+}
+
+.sns-resposive {
+    display: inline;
+}
+.sns-resposive ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+#airisYoga .sns-resposive ul {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.sns-resposive ul li a {
+    display: block;
+    color: #000;
+    padding: 15px 15px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+}
+.sns-resposive  .line-responsive a {
+    background-color: #ddc9ea;
+    box-shadow: 0 5px 25px rgba(0,0,0,.15);
+    color: #fff;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.sns-resposive  .insta-responsive a {
+    background: linear-gradient(45deg, rgba(254,212,117,0.9) 0%,rgba(229,61,93,0.9) 50%,rgba(194,49,134,0.9) 70%,rgba(156,56,187,0.9) 100%);
+    box-shadow: 0 5px 25px rgba(0,0,0,.15);
+    color: #fff;
+}
+
+.footerInner >.container{
+    width: auto;
+    margin: 0;
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+}
+.footerInner .container nav,
+.footerInner .container .footerSns {
+    display: none;
+}
+.footerLogo a{
+    font-size: 20px;
+}
+
+/* Facial page */
+
+.facialMenu{
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+.facialFlex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.facialImg{
+    width: 100%;
+    margin-top: 60px;
+}
+.facialImg img{
+    width: 100%;
+}
+
+.facialtextBox{
+    margin-left: 0;
+    width: 85%;
+}
+
+.facialCont h3{
+    font-size: 22px;
+    padding-left: 10px;
+    border-left: 10px solid #ee9ca7;
+    margin-bottom: 10px;
+}
+
+.facialDes{
+    line-height: 1.2;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.facialDesTtl{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+.facialDesTtl p{
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: 1px solid #333;
+}
+.facialDesTtl p span{
+    font-size: 14px;
+    padding-left: 10px;
+}
+.facialDes ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.facialFee{
+    margin-top: 10px;
+}
+
+.facialFlow{
+    text-align: center;
+    line-height: 1.8;
+    padding-bottom: 60px;
+}
+
+
+
+/* home */
+
+.productSection{
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+
+.tab{
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.tab li{
+    width: calc(100%/3);
+    text-align: center;
+}
+
+.tab li a{
+    font-size: 12px;
+    letter-spacing: normal;
+    padding: 10px;
+}
+
+.tab li a span{
+    font-size: 8px;
+}
+
+
+@keyframes tabAnime{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1s;
+    }
+}
+
+.articles h3{
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.articles p{
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.articles img{
+    height: 220px;
+}
+
+.salonSection{
+    width: 100%;
+    padding-bottom: 100px;
+}
+.salonList{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.salonSection ul{
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+}
+
+.salonSection ul:last-child{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.salonSection ul li{
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.salonSection ul li img{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.resposive-yogamovie{
+    display: none;
+}
+
+.mainYogaSection{
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+.mainYogaNews{
+    flex-direction: column;
+    border: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.mainYogaNews .newsContent{
+    margin-top: 20px;
+    border: none;
+    border-top: 1px solid lightgray;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.newsTxt{
+    border-bottom: 1px solid lightgray;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.newsContent p{
+    font-size: 14px;
+    padding: 0;
+}
+
+/* addict page */
+.restop-oral-image{
+    height: 300px;
+    margin: 0 auto;
+}
+
+.restop-oral-image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.restop-oral{
+    height: 700px;
+    position: relative;
+}
+
+.resmaintop-oral-image{
+    margin: 0 auto;
+}
+
+.resmaintop-oral-image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+#avon .restop-oral{
+    height: 200px;
+    position: relative;
+}
+
+#hepaskin .restop-oral{
+    height: 200px;
+    position: relative;
+}
+
+.restop-oral-box-wrap{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0 15px 15px rgba(138, 139, 141, 0.4);
+    display: inline-block;
+}
+
+.restop-index-box-wrap{
+    position: absolute;
+    bottom: 130px;
+    left: 10%;
+    background-color: rgba(255, 255, 255, .8);
+    display: inline-block;
+}
+
+.restop-oral-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-pack: center;
+    text-align: center;
+    width: 280px;
+    height: 450px;
+    margin: 30px;
+}
+
+.restop-index-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-pack: center;
+    text-align: center;
+    border: 1px solid #333;
+    width: 280px;
+    height: 300px;
+    margin: 30px;
+}
+
+.restop-oral-box h4{
+    font-size: 16px;
+    line-height: 1.42;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.restop-oral-box h4 span{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.42;
+    color: #d82a53;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.restop-oral-box p{
+    width: 270px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.text-box {
+    position: absolute;
+    top: 25%;
+    letter-spacing: 3px;
+}
+
+.text-box h1{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Waterfall', cursive;
+}
+
+
+.addictProduct{
+    margin-top: 100px;
+    margin-bottom: -50px;
+}
+
+#v3 .addictProduct,
+#hepaskin .addictProduct,
+#avon .addictProduct{
+    margin-top: 0px;
+}
+
+.homecareList{
+    margin: 0 auto;
+    width: 90%;
+
+}
+
+.homecareList ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.homecareList ul li{
+    margin: 0 10px;
+    text-align: center;
+    place-items: center;
+    padding: 5px 10px;
+    width: 30%;
+}
+.homecareList ul li img{
+    width: 100%;
+    height: auto;
+}
+
+.itemName{
+    padding: 10px 0;
+}
+.itemSubname{
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.flowInner{
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: -50px;
+}
+
+
+.contTtl{
+    line-height: 2;
+    width: 60%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    margin: 0 auto;
+}
+
+.contTtl h4{
+    font-size: 18px;
+    padding-top: 60px;
+}
+
+.contTtl p{
+    padding: 5px 0;
+    text-align: center;
+    font: 14px;
+}
+
+.flowTimeCost{
+    width: 100%;
+    margin: 0 auto;
+
+}
+.timeCost{
+    display: flex;
+    justify-content: space-around;
+}
+
+.timeCost li{
+    line-height: 1;
+}
+
+.timeCost p{
+    font-size: 16px;
+}
+
+.timeCost span{
+    font-size: 18px;
+    padding-left: 10px;
+    color: #dc879c;
+    font-weight: bold;
+}
+
+.flowCont {
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+.flowCont span{
+    color: #e19fab;
+}
+
+.flow{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.flow li{
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.flow li span{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.flowImg{
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flowImg img{
+    width: 100%;
+    padding-top: 30px;
+}
+
+
+.addictOnayami{
+    background-color: #f6f0f0;
+    margin-bottom: 30px;
+    padding-bottom: 100px;
+}
+
+
+.addictOnayamiImg{
+    height: 300px;
+    opacity: .9;
+}
+
+
+.onayamiList{
+    margin-top: 50px;
+    font-size: 14px;
+    width: 90%;
+}
+
+#airisYoga .onayamiList{
+    margin-top: 0px;
+}
+.onayamiImg{
+    width: calc(100%/3);
+    margin: 0 auto;
+}
+
+.addictIngredient{
+    margin-top: -30px;
+}
+
+.ingredientList{
+    width: 80%;
+    margin-top: 30px;
+}
+
+.ingredientList h3{
+    font-size: 18px;
+}
+
+
+.ingredientList h3 span{
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ingredientList ul{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ingredientList ul li{
+    display: flex;
+    align-items: center;
+}
+
+.ingredientList li img{
+    height: 18px;
+    padding-right: 15px;
+}
+
+.ingredientList li .textBox{
+    font-size: 16px;
+}
+
+.ingredientList p{
+    font-size: 14px;
+    padding-bottom: 30px;
+    padding-left: 36px;
+    line-height: 1.7;
+}
+
+.addictKoe{
+    background-color: #f6f0f0;
+    padding-bottom: 100px;
+}
+
+
+#resproductSlider{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.resproductSlider{
+    width: 80%;
+    margin: 0 auto;
+}
+.resproductCont img{
+    width: 50%;
+    margin:  0 auto;
+}
+
+#airisYoga .resproductCont img{
+    width: 90%;
+}
+
+.resproductText{
+    max-width: 80%;
+    margin:  0 auto;
+    line-height: 1.5;
+}
+
+.resproductCont{
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+#airisYoga .resproductCont{
+    padding-bottom: 0;
+}
+
+#reskoeSlider{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.reskoeSlider{
+    width: 80%;
+    margin: 0 auto;
+}
+.reskoeCont img{
+    width: 50%;
+    margin:  0 auto;
+}
+
+.reskoeText{
+    max-width: 80%;
+    margin:  0 auto;
+    line-height: 1.5;
+}
+
+.reskoeCont{
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+footer{
+    background-color: none;
+    border-top: 0px;
+}
+
+.fnav-menu{
+    display: none;
+}
+
+.resfnav-menu{
+    display: block;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.resfnav-logo{
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.resfnav-text{
+    font-size: 5px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-top: 1px solid whitesmoke;
+
+}
+
+#datsumo,
+#facial,
+#body{
+    width: 100%;
+    margin:  0 auto;
+}
+
+.priceMenu{
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.priceMenuInner{
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 90%;
+    background-color: rgb(255, 255, 255, 0.6);
+    padding-bottom: 60px;
+}
+
+.priceTtl{
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.priceTtl h3{
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 3px solid #ee9ca7;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.menuTtl{
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+.priceMenu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    margin: 0 40px;
+    font-size: 14px;
+}
+
+/* Facial page */
+
+.facialtextBox h3{
+    font-size: 16px;
+    padding-left: 10px;
+    border-left: 8px solid #ee9ca7;
+    margin-bottom: 10px;
+}
+
+.ttlBox p{
+    font-size: 14px;
+}
+
+.facialDes{
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+
+.facialDesTtl p{
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: 1px solid #333;
+    font-size: 16px;
+}
+
+.facialDesTtl p span{
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.facialFlex{
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    padding-bottom: 100px;
+}
+
+.facialFlex:last-child{
+    padding-bottom: 20px;
+}
+
+.facialtextBox{
+    width: 100%;
+}
+
+.facialtextBox img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facialDes{
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.facialDesTtl{
+    padding: 15px 0;
+}
+
+.facialFlow{
+    text-align: left;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.facialTimePrice{
+    font-size: 14px;
+}
+
+.facialTimePrice span{
+    font-size: 16px;
+    color:#f77999;
+    font-weight: bold;
+}
+
+.facialtextBox .ttlBox{
+    padding-bottom: 20px;
+}
+
+
+.careFlex .imgBox{
+    margin: 0 auto;
+    width: 50%;
+}
+
+.careFlex .imgBox img{
+    height: 100%;
+}
+
+/* ヨガページ */
+
+
+.yogaSection video{
+    width: 100%;
+}
+
+.airisYoga{
+    background-color: #f6f0f0;
+    width: 100%;
+}
+
+#airisYoga .addictProduct{
+    margin-top: 0;
+}
+.airisYoga ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.airisYoga ul li{
+    padding: 0 20px;
+    text-align: center;
+}
+
+.airisYoga ul li p{
+    padding: 20px 0;
+    font-size: 18px;
+}
+
+.airisYoga ul li.kakeru{
+    margin-bottom: 70px;
+}
+.airisYoga ul li.kakeru p{
+    font-size: 28px;
+}
+
+.airisYoga img{
+    width: 130px;
+}
+
+.profileSection{
+    background-color: #f6f0f0;
+    margin: 0 auto;
+}
+
+.profileSection ul{
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+
+.profileInner{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.profileSection ul li{
+    text-align: center;
+}
+
+.profileSection ul li img{
+    height: 300px;
+}
+
+.profileImg p{
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.profileImg p span{
+    font-size: 14px;
+}
+.profileContent{
+    padding-top: 20px;
+    max-width: 300px;
+}
+.profileContent p{
+    font-size: 14px;
+}
+
+}
